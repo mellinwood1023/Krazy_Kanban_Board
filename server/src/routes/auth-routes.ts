@@ -16,9 +16,10 @@ export const login = async (req: Request, res: Response) => {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
     // Create a JWT token
+    const secretKey = process.env.JWT_SECRET_KEY || 'your_secret_key'; // Use a secret key from environment variables
     const token = jwt.sign(
       { userId: user.id, username: user.username },
-      process.env.JWT_SECRET_KEY,
+      secretKey,
       { expiresIn: '1h' } // Token expires in 1 hour
     );
     // Return the token in the response
