@@ -5,9 +5,9 @@ import bcrypt from 'bcrypt';
 
 export const login = async (req: Request, res: Response) => {
   // TODO: If the user exists and the password is correct, return a JWT token
-  const { email, password } = req.body;
+  const { username, password } = req.body;
   try {
-    const user = await User .findOne({ where: { email } });
+    const user = await User .findOne({ where: { username } });
     if (!user) {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
@@ -17,7 +17,7 @@ export const login = async (req: Request, res: Response) => {
     }
     // Create a JWT token
     const token = jwt.sign(
-      { userId: user.id, email: user.email },
+      { userId: user.id, username: user.username },
       process.env.JWT_SECRET_KEY,
       { expiresIn: '1h' } // Token expires in 1 hour
     );
