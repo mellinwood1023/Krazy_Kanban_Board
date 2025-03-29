@@ -20,7 +20,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
     const secret = process.env.JWT_SECRET || 'secret';
     const decoded = jwt.verify(token, secret) as JwtPayload;
     (req as any).user = decoded;
-    next();
+    return next();
   } catch (error) {
     console.error(error);
     return res.sendStatus(403);
