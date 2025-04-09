@@ -1,48 +1,56 @@
 # Krazy_Kanban_Board
+Krazy Kanban is a full-stack project management app that lets users create, edit, and manage tasks visually using a classic kanban board layout. Each task can be moved between Todo, In Progress, and Done columns. It features user authentication and a clean, responsive interface.
 
 
+# ✨ Features
+📝 Create new task tickets
 
-# 🧰 Built With
-TypeScript
+✅ Edit and delete tasks
 
-Node.js + Express
+📌 Columns for Todo, In Progress, and Done
 
-PostgreSQL
+🔐 JWT-based user authentication
 
-Inquirer
+🎨 Color-coded kanban columns
 
-Axios
+👥 Tracks who created each task
 
-JSON Web Token (JWT)
+🚀 Deployed and production-ready
 
-dotenv
+# 🔧 Tech Stack
+Frontend: React + TypeScript
 
-# 🛠 Setup
+Backend: Express.js + Node.js
+
+Auth: JWT (JSON Web Tokens)
+
+Database: PostgreSQL
+
+Axios: For frontend-backend communication
+
+Render: For hosting and deployment
+
+# 🛠 Getting Started
 Install dependencies
 
 bash
 Copy
 Edit
 npm install
-Run the app
+Environment setup
+Create a .env file
 
-bash
-Copy
-Edit
-npm run start
-Set up the database
+# Deployment
 
-# 📁 Key Files
-server.ts – Express server logic
+On Render: https://krazy-kanban-board-cbe4.onrender.com
 
-connection.ts – PostgreSQL connection
+![image](https://github.com/user-attachments/assets/0e3cd95a-50b4-437c-aa9e-c4763d0ab979)
 
-cli.ts – Inquirer-powered prompt interface
+![image](https://github.com/user-attachments/assets/d66f0a47-3ded-4fc5-824e-014c1d9f4c8d)
 
-schema.sql / seeds.sql – DB setup & seed data
 
-# 🙏 Thanks
-Created with help from tutors and support team.
+# Collaborators
+Built with love & support from tutors and collaborators.
 
 # 📜 License
 MIT
