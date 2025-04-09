@@ -7,7 +7,7 @@ export const authenticateToken = (req, res, next) => {
     }
     const token = authHeader.split(' ')[1];
     try {
-        const secret = process.env.JWT_SECRET || 'secret';
+        const secret = process.env.JWT_SECRET || 'asdf';
         const decoded = jwt.verify(token, secret);
         req.user = decoded;
         return next();
